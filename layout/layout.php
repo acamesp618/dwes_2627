@@ -20,12 +20,15 @@
         <span class="fs-6">Titulo de la aplicación</span>
     </header>
 
+    <! -- contenido principal de la aplicacion -- >
     <main>
         <div class="content">
 
         </div>
     </main>
 
+
+    <!-- Pie de página -->
     <footer class="footer mt-auto py-3 fixed-bottom bg-light">
       <div class="container">
         <span class="text-muted">&copy; 2026
