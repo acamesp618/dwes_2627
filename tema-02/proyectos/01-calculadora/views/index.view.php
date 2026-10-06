@@ -45,6 +45,7 @@
                     <button type="submit" class="btn btn-warning" name="operacion" value="restar" formaction="restar.php">Restar</button>
                     <button type="submit" class="btn btn-warning" name="operacion" value="multiplicar" formaction="multiplicar.php">Multiplicar</button>
                     <button type="submit" class="btn btn-warning" name="operacion" value="dividir" formaction="dividir.php">Dividir</button>
+                    <button type="submit" class="btn btn-warning" name="operacion" value="potencia" formaction="potencia.php">Potencia</button>
                     
 
                   </div>
