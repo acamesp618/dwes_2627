@@ -15,15 +15,15 @@
 
 <body>
   <!-- capa principal de la aplicacion -->
-  <div class="container">
+  <div class="container mt-3">
 
     <header class="bg-primary text-white p-3 mb-3">
-      <i class="bi bi-calculator"></i>
+      <i class="bi bi-rocket-takeoff-fill"></i>
       <span class="fs-6">Proyecto 2.2 - Cálculo Lanzamiento de Proyectiles</span>
     </header>
 
 
-    <! -- contenido principal de la aplicacion -->
+    <! -- contenido principal de la aplicacion -- >
       <main>
         <div class="content">
           <!-- Formulario de la calculadora -->
