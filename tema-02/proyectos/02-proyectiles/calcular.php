@@ -38,7 +38,23 @@ $velocidad_inicial_horizontal = $velocidad_inicial * cos($angulo_radianes);
 $velocidad_inicial_vertical = $velocidad_inicial * sin($angulo_radianes);
 
 // Calculamos la altura máxima alcanzada 
-$altura_maxima = pow($velocidad_inicial, 2) * 
+$altura_max = (pow($velocidad_inicial, 2) * pow(sin($angulo_radianes), 2)) / (2 * G);
+
+// Calculamos el alcance máximo del proyectil
+$alcance_max = (pow($velocidad_inicial, 2) * sin(2 * $angulo_radianes)) / G;
+
+// Tiempo total de vuelo
+$tiempo_vuelo = (2 * $velocidad_inicial_vertical) / G;
+
+// Formateo de los resultados a 2 decimales
+$velocidad_inicial = number_format($velocidad_inicial, 2, ",", ".");
+$angulo_lanzamiento = number_format($angulo_lanzamiento, 2, ",", ".");
+$angulo_radianes = number_format($angulo_radianes, 2, ",", ".");
+$velocidad_inicial_horizontal = number_format($velocidad_inicial_horizontal, 2, ",", ".");
+$velocidad_inicial_vertical = number_format($velocidad_inicial_vertical, 2, ",", ".");
+$altura_max = number_format($altura_max, 2, ",", ".");
+$alcance_max = number_format($alcance_max, 2, ",", ".");
+$tiempo_vuelo = number_format($tiempo_vuelo, 2, ",", ".");
 
 // Vista
-include 'views/calculos.view.php';
+include 'views/resultado.view.php';
