@@ -45,7 +45,7 @@
 
                 <tr>
                   <td>
-                    Ángulo inclinacion:
+                    Ángulo inclinación:
                   </td>
                   <td> <?= $angulo_lanzamiento ?> º</td>
                 </tr>
@@ -106,7 +106,7 @@
             <div class="btn-group" role="group">
               <a class="btn btn-warning" href="index.php" role="button">Nuevo cálculo</a>
             </div>
-            
+
           </form>
         </div>
       </main>
