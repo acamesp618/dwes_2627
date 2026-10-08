@@ -15,7 +15,7 @@
 
 <body>
     <!-- capa principal de la aplicacion -->
-    <div class="container">
+    <div class="container mt-3">
 
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
