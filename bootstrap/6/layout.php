@@ -24,7 +24,7 @@
       <span class="fs-6">Titulo de la aplicación</span>
     </header>
 
-    <! -- contenido principal de la aplicacion -->
+    <! -- contenido principal de la aplicacion -- >
       <main>
         <div class="content">
 
