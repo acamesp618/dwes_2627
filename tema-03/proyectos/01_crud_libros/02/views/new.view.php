@@ -31,7 +31,7 @@
 
                     <legend>Formulario Nuevo Libro</legend>
 
-                    <form>
+                    <form method="POST" action="create.php">
                         <div class="mb-3">
                             <label for="titulo" class="form-label">Título</label>
                             <input type="text" class="form-control" id="titulo" name="titulo" required>
@@ -57,9 +57,9 @@
                             <input type="number" step="0.01" class="form-control" id="precio" name="precio" required>
                         </div>
 
-                        <a href="index.php" class="btn-solid theme-secondary" role="button">Cancelar</a>
-                        <button type="submit" class="btn-solid theme-primary" >Guardar</button>
+                        <a href="index.php" class="btn-solid theme-secondary" role="button">Volver</a>
                         <button type="reset" class="btn-solid theme-danger" >Borrar</button>
+                        <button type="submit" class="btn-solid theme-primary" >Guardar</button>
                 </div>
             </main>
 

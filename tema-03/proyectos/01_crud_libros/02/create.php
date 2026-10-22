@@ -37,14 +37,14 @@ $precio = htmlspecialchars($_POST['precio'] ?? '');
 // Proceso de validacion de los datos del formulario
 
 // Obtener el array de libros existentes
-$libros = getLibros();
+$libros = get_libros();
 
 // Obtener id del nuevo libro insertado
 $new_book_id = obtener_id_nuevo_libro($libros);
 
 // Crear array asociativo con los datos del libro
 $new_book = [
-    'id' => null,
+    'id' => $new_book_id,
     'titulo' => $titulo,
     'autor' => $autor,
     'editorial' => $editorial,

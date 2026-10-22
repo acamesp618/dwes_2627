@@ -26,7 +26,7 @@ require_once 'libs/functions.php';
 // Models
 
 // Negociado
-$libros = getLibros();
+$libros = get_libros();
 
 // Views
 include 'views/index.view.php';

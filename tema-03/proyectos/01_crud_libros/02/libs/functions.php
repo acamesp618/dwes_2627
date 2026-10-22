@@ -5,12 +5,12 @@
     Funciones auxiliares para el proyecto CRUD de libros.
 
     Funciones incluidas:
-        - getLibros(): Devuelve un array con todos los libros creados.
+        - get_libros(): Devuelve un array con todos los libros creados.
         - obtener_id_nuevo_libro($libros): Devuelve el id del nuevo libro a insertar en el array de libros.
 */
 
 // Funcion get_libros()
-function getLibros() {
+function get_libros() {
     // Array de libros (simulando una base de datos)
     $libros = [
         [
