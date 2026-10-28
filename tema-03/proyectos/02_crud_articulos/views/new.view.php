@@ -24,10 +24,10 @@
             <span class="fs-6">Proyecto 3.2. CRUD de articulos</span>
         </header>
 
-        <! -- contenido principal de la aplicacion -- >
+        <! -- contenido principal de la aplicacion -->
             <main>
                 <div class="content">
-                    <form>
+                    <form action="create.php" method="POST">
                         <h1>Formulario Añadir Artículo</h1>
                         <div class="mb-3">
                             <label for="titulo" class="form-label">Descripción</label>
@@ -38,14 +38,12 @@
                             <input type="text" class="form-control" id="modelo" name="modelo" required>
                         </div>
                         <div class="mb-3 form-field">
-                            <label for="exampleFormControlSelect2" class="form-label">Categoría</label>
-                            <select class="form-control" id="unidades">
-                                <option>Selecciona uno</option>
-                                <option value="1">Portátil</option>
-                                <option value="2">PC sobremesa</option>
-                                <option value="3">Componente</option>
-                                <option value="4">Pantalla</option>
-                                <option value="5">Impresora</option>
+                            <label for="categoria" class="form-label">Categoría</label>
+                            <select class="form-control" id="categoria" name="categoria" required>
+                                <option value="" disabled selected>Selecciona uno</option>
+                                <?php foreach ($categorias as $cat): ?>
+                                    <option value="<?=  $cat ?>"><?= $cat ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -57,8 +55,8 @@
                             <input type="number" step="0.01" class="form-control" id="precio" name="precio" required>
                         </div>
                         <a href="index.php" class="btn-solid theme-secondary" role="button">Cancelar</a>
-                        <button type="reset" class="btn-solid theme-danger" >Reset</button>
-                        <button type="submit" class="btn-solid theme-primary" >Añadir</button>
+                        <button type="reset" class="btn-solid theme-danger">Reset</button>
+                        <button type="submit" class="btn-solid theme-primary">Añadir</button>
                     </form>
 
                 </div>

@@ -2,58 +2,38 @@
 
 /**
  * create.php
- * 
- * Permite crear un nuevo articulo a partir de los datos ingresados en un formulario.
- 
- * 
- * @package CRUD articulos
- * @author [Tu Nombre]
- * @version 1.0
- * 
- * Tabla articulos:
- * - id (INT, PRIMARY KEY, AUTO_INCREMENT)
- * - descripcion
- * - modelo
- * - categoria
- * - unidades
- * - precio (DECIMAL(10,2))
- * 
+ * Recibe los datos del formulario de new.php y añade el nuevo ARTÍCULO a la tabla.
  */
 
-// Cargar librerias
-require_once 'libs/funciones_articulos.php';
+// Cargar librerías
+require_once 'libs/functions.php';
 
-// Models
-
-// Negociado
-
-// Extraer los datos del formulario
+// Extraer los datos enviados desde el formulario
 $descripcion = htmlspecialchars($_POST['descripcion'] ?? '');
-$modelo = htmlspecialchars($_POST['modelo'] ?? '');
-$categoria = htmlspecialchars($_POST['categoria'] ?? '');
-$unidades = htmlspecialchars($_POST['unidades'] ?? '');
-$precio = htmlspecialchars($_POST['precio'] ?? '');
+$modelo      = htmlspecialchars($_POST['modelo'] ?? '');
+$categoria   = htmlspecialchars($_POST['categoria'] ?? '');
+$unidades    = (int)($_POST['unidades'] ?? 0);
+$precio      = (float)($_POST['precio'] ?? 0.0);
 
-// Proceso de validacion de los datos del formulario
-
-// Obtener el array de libros existentes
+// Obtener el array de artículos existentes
 $articulos = get_articulos();
 
-// Obtener id del nuevo libro insertado
-$nuevo_articulo_id = get_indice_articulo_por_id($articulos, $id);
+// Generar nuevo ID correlativo (último ID + 1)
+$ultimo_articulo = end($articulos);
+$nuevo_id = $ultimo_articulo ? $ultimo_articulo['id'] + 1 : 1;
 
-// Crear array asociativo con los datos del libro
+// Crear el array asociativo del nuevo artículo
 $nuevo_articulo = [
-    'id' => $nuevo_articulo_id,
+    'id'          => $nuevo_id,
     'descripcion' => $descripcion,
-    'modelo' => $modelo,
-    'categoria' => $categoria,
-    'unidades' => $unidades,
-    'precio' => $precio
+    'modelo'      => $modelo,
+    'categoria'   => $categoria,
+    'unidades'    => $unidades,
+    'precio'      => $precio
 ];
 
-// Agregar el nuevo libro al array de libros
+// Añadir el nuevo artículo al array principal
 $articulos[] = $nuevo_articulo;
 
-// Views
-include 'views/index.view.php';
+// Cargar la vista principal para mostrar la tabla con el nuevo elemento
+require_once 'views/index.view.php';

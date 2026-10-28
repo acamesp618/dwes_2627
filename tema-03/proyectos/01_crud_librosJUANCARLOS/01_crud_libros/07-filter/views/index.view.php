@@ -59,8 +59,8 @@
                             </li>
 
                         </ul>
-                        <form class="hstack gap-2" role="search">
-                            <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                        <form class="hstack gap-2" role="search" action="filter.php" method="get">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="prompt"/>
                             <button class="btn-solid btn-icon theme-secondary" type="submit">
                                 <svg class="bi" width="16" height="16">
                                     <use href="#search" />

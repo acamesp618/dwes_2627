@@ -21,7 +21,7 @@
  */
 
 // Cargar librerias
-require_once 'libs/funciones_articulos.php';
+require_once 'libs/functions.php';
 
 // Models
 
