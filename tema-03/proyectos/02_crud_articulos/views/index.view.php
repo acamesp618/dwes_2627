@@ -35,11 +35,22 @@
                                 <a class="nav-link active" aria-current="page" href="new.php">Nuevo</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Ordenar</a>
+                                <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                    Ordenar
+                                </button>
+                                <div class="menu">
+                                    <a class="menu-item" href="order.php?criterio=id">Id</a>
+                                    <a class="menu-item" href="order.php?criterio=descripcion">Descripción</a>
+                                    <a class="menu-item" href="order.php?criterio=modelo">Modelo</a>
+                                    <a class="menu-item" href="order.php?criterio=categoria">Categoria</a>
+                                    <a class="menu-item" href="order.php?criterio=unidades">Unidades</a>
+                                    <a class="menu-item" href="order.php?criterio=precio">Precio</a>
+
+                                </div>
                             </li>
                         </ul>
                         <form class="hstack gap-2" role="search" action="filter.php" method="GET">
-                            <input class="form-control" type="search" name="expresion" placeholder="Buscar" aria-label="Search" />
+                            <input class="form-control" type="search" name="prompt" placeholder="Buscar" aria-label="Search" />
                             <button class="btn-solid btn-icon theme-secondary" type="submit">
                                 <i class="bi bi-search"></i>
                             </button>
@@ -81,12 +92,9 @@
                                         <i class="bi bi-pencil"></i>
                                     </a>
                                     <!-- Eliminar -->
-                                    <form action="delete.php" method="POST" class="d-inline" onsubmit="return confirm('¿Desea eliminar el artículo?');">
-                                        <input type="hidden" name="indice" value="<?= $indice ?>">
-                                        <button type="submit" class="btn btn-outline-primary btn-sm" title="Eliminar">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </form>
+                                    <a href="delete.php?indice=<?= $indice ?>" class="btn btn-outline-primary btn-sm" title="Eliminar">
+                                        <i class="bi bi-trash3"></i>
+                                    </a>
                                     <!-- Mostrar -->
                                     <a href="show.php?indice=<?= $indice ?>" class="btn btn-outline-primary btn-sm" title="Mostrar">
                                         <i class="bi bi-eye"></i>
