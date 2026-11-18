@@ -21,7 +21,7 @@
         <!-- cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Proyecto 4.1 - CRUD Artículos - POO Encapsulación</span>
+            <span class="fs-6 text-white">Proyecto 4.1 - CRUD Artículos - POO Encapsulación</span>
         </header>
 
         <!-- Menú principal de la aplicación -->
@@ -42,7 +42,7 @@
                                 <a class="nav-link active" aria-current="page" href="index.php">Listado</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="new.php">Añadir artículo</a>
+                                <a class="nav-link active" aria-current="page" href="new.php">Nuevo</a>
                             </li>
                         </ul>
                     </div>

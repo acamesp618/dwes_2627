@@ -16,11 +16,13 @@
 */
 
 // Tabla que va a contener una array de objetos de la clase Articulo
-class Tarticulos {
+class Tarticulos
+{
 
     private ?array $tarticulos;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->tarticulos = [];
     }
 
@@ -49,7 +51,8 @@ class Tarticulos {
         Con este array tengo que generar el select  dinámico del campo marca.
         Cuando  estemos trabajando con base  de datos: SELECT id, marca FROM marcas order by id.
     */
-    static public function getMarcas(): ?array {
+    static public function getMarcas(): ?array
+    {
         $marcas = [
             'Samsung',
             'LG',
@@ -72,7 +75,8 @@ class Tarticulos {
         Con este array tengo que generar una lista de checbox dinámico del campo categoria.
         Cuando  estemos trabajando con base  de datos: SELECT id, categoria FROM categorias order by id.
     */
-    public static function getCategorias(): ?array {
+    public static function getCategorias(): ?array
+    {
         $categorias = [
             'Electrónica',
             'Tablet',
@@ -91,7 +95,8 @@ class Tarticulos {
         Método addArticulos()
         Descripción: Devuelve un array con todos los artículos disponibles
     */
-    public function addArticulos() {
+    public function addArticulos()
+    {
 
         // Creaer un objeto de la clase Articulo
         $articulo = new Articulo(
@@ -99,11 +104,11 @@ class Tarticulos {
             'Smartphone Smasun Galaxy s21',
             'S21',
             0,
-            [0,2, 3],
+            [0, 2, 3],
             5,
             12.45
         );
- 
+
         $this->tarticulos[] = $articulo;
 
         // Añadir más artículos al array
@@ -115,7 +120,7 @@ class Tarticulos {
             [0, 1, 3],
             10,
             15.99
-        );  
+        );
 
         $this->tarticulos[] = $articulo;
 
@@ -172,7 +177,8 @@ class Tarticulos {
         Método get_indice_categorias_a_nombres()
         Descripción: Devuelve un array con los nombres de las categorias a partir de los indices
     */
-    public function get_indice_categorias_a_nombres(array $indices): array {
+    public function get_indice_categorias_a_nombres(array $indices): array
+    {
         $categorias = self::getCategorias();
         $nombres = [];
 
@@ -185,26 +191,9 @@ class Tarticulos {
         return $nombres;
     }
 
-    /**
-     * Añade un único objeto Articulo al array tarticulos
-     */
-    public function addArticulo(Articulo $articulo): void {
-        $this->tarticulos[] = $articulo;
-    }
 
-    /**
-     * Calcula el siguiente ID disponible automáticamente
-     */
-    public function getSiguienteId(): int {
-        if (empty($this->tarticulos)) {
-            return 1;
-        }
-        $maxId = 0;
-        foreach ($this->tarticulos as $articulo) {
-            if ($articulo->getId() > $maxId) {
-                $maxId = $articulo->getId();
-            }
-        }
-        return $maxId + 1;
+    public function create(Articulo $articulo): void
+    {
+        $this->tarticulos[] = $articulo;
     }
 }
