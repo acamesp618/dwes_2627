@@ -1,0 +1,4 @@
+<header class="bg-primary text-white p-3 mb-3">
+            <i class="bi bi-stack"></i>
+            <span class="fs-6 text-white">Proyecto 4.2 - CRUD Artículos - POO SIN Encapsulación</span>
+        </header>

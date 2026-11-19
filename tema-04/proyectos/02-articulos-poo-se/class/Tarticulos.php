@@ -173,7 +173,10 @@ class Tarticulos
         return $nombres;
     }
 
-
+    /*
+        método: create()
+        Descripción: Añade un nuevo objeto a la tabla
+    */
     public function create(Articulo $articulo): void
     {
         $this->tarticulos[] = $articulo;

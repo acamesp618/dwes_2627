@@ -3,7 +3,7 @@
 
 <head>
     <!-- Cargar la cabecera de la aplicacion -->
-     <?php require_once __DIR__ . '/views/layouts/head.layout.php'; ?>
+     <?php require_once __DIR__ . '/layouts/head.layout.php'; ?>
      <title>Proyecto 4.2 - CRUD Articulos - POO SIN Encapsulación</title>
 </head>
 
@@ -12,7 +12,7 @@
     <div class="container mt-3">
 
         <!-- cabecera de la aplicación -->
-        <?php require_once __DIR__ . '/views/partials/header.partial.php'; ?>
+        <?php require_once __DIR__ . '/partials/header.partial.php'; ?>
 
         <!-- Menú principal de la aplicación -->
         <nav class="navbar md:navbar-expand bg-1">
@@ -99,10 +99,10 @@
         </main>
 
         <!-- pie de página de la aplicación -->
-        <?php require_once __DIR__ . '/views/partials/footer.partial.php'; ?>
+        <?php require_once __DIR__ . '/partials/footer.partial.php'; ?>
 
         <!-- js bootstrap basico 6.0 -->
-         <?php require_once __DIR__ . '/views/layouts/js_bootstrap.php'; ?>
+         <?php require_once __DIR__ . '/layouts/js_bootstrap.php'; ?>
 
     </div>
 </body>
