@@ -45,7 +45,7 @@
                     <!-- Curso -->
                     <div class="mb-3">
                         <label for="curso" class="form-label">Curso:</label>
-                        <select name="curso" id="curso" class="form-select" required>
+                        <select name="curso" id="curso" class="form-control combobox-toggle" type="button" required>
                             <option value="">Seleccione curso ...</option>
                             <?php foreach ($cursos as $indice => $curso): ?>
                                 <option value="<?= $indice ?>"><?= $curso ?></option>
