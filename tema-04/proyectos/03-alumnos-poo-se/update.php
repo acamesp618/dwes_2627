@@ -11,7 +11,7 @@ require_once __DIR__ . '/class/Alumno.php';
 require_once __DIR__ . '/class/TablaAlumnos.php';
 
 // 2. Leer id de la URL y resto de datos de $_POST
-$id = isset($_GET['id']) ? (int) $_GET['id'] : null;
+$id = $_GET['id'] ?? null;
 
 $nombre = $_POST['nombre'] ?? null;
 $apellidos = $_POST['apellidos'] ?? null;
